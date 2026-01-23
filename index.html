@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Parthi Gadget - Honest mobile and gadget reviews, comparisons, and buying guides.">
+    <title>Parthi Gadget | Best Mobile & Gadget Reviews</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons (RemixIcon) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="nav-logo">Parthi Gadget</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/categories.html" class="nav-link">Categories</a>
+                <a href="pages/compare.html" class="nav-link">Compare</a>
+                <a href="pages/blog.html" class="nav-link">Blog</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">
+                    <i class="ri-menu-4-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero section-padding" style="position: relative; overflow: hidden;">
+        <!-- Decorative blobs -->
+        <div
+            style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: var(--primary-light); border-radius: 50%; opacity: 0.5; filter: blur(80px); z-index: -1;">
+        </div>
+        <div
+            style="position: absolute; bottom: -50px; left: -100px; width: 300px; height: 300px; background: var(--secondary-color); border-radius: 50%; opacity: 0.2; filter: blur(60px); z-index: -1;">
+        </div>
+
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <span class="badge badge-new" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <i class="ri-sparkling-fill" style="margin-right: 5px;"></i> The Future of Tech is Here
+                </span>
+
+                <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;" class="grad-text">
+                    Discover Your Next <br> Gadget Adventure
+                </h1>
+
+                <p
+                    style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We review the latest phones, laptops, and more so you don't have to.
+                </p>
+
+                <!-- Search Bar (Etech Style) -->
+                <div
+                    style="background: white; padding: 10px; border-radius: 50px; box-shadow: var(--shadow-lg); display: flex; max-width: 600px; margin: 0 auto 3rem; border: 1px solid var(--border-color);">
+                    <i class="ri-search-line"
+                        style="font-size: 1.5rem; color: var(--primary-color); margin: 0 15px; align-self: center;"></i>
+                    <input type="text" placeholder="Search for phones, laptops..."
+                        style="flex: 1; border: none; outline: none; font-size: 1rem; color: var(--text-main);">
+                    <button class="btn btn-primary" style="padding: 0.75rem 2rem;">Search</button>
+                </div>
+
+                <div class="flex justify-center gap-4">
+                    <div style="display: flex; gap: 2rem; color: var(--text-muted); font-weight: 500;">
+                        <span class="flex items-center gap-2"><i class="ri-shield-check-fill"
+                                style="color: var(--primary-color);"></i> Honest Reviews</span>
+                        <span class="flex items-center gap-2"><i class="ri-price-tag-3-fill"
+                                style="color: var(--secondary-color);"></i> Best Prices</span>
+                        <span class="flex items-center gap-2"><i class="ri-contrast-drop-fill"
+                                style="color: var(--accent-color);"></i> Deep Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trending Section -->
+    <section id="trending" class="section-padding">
+        <div class="container">
+            <div class="flex justify-between items-center" style="margin-bottom: 2rem;">
+                <h2>Trending Mobiles</h2>
+                <a href="pages/categories.html" style="color: var(--primary-color); font-weight: 500;">View All <i
+                        class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;"
+                id="trendingGrid">
+                <!-- Content will be injected by JS -->
+                <!-- Loading State -->
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-body">
+                        <div
+                            style="height: 24px; background: var(--border-color); width: 80%; margin-bottom: 10px; border-radius: 4px;">
+                        </div>
+                        <div style="height: 16px; background: var(--border-color); width: 60%; border-radius: 4px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Gadgets -->
+    <!-- Latest Gadgets - Colored Section -->
+    <section class="section-padding section-colored" style="position: relative; overflow: hidden;">
+        <!-- Abstract background shape -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(circle at 20% 50%, white 0%, transparent 50%); pointer-events: none;">
+        </div>
+
+        <div class="container">
+            <div class="flex justify-between items-center" style="margin-bottom: 3rem;">
+                <h2 style="color: white; font-size: 2.5rem;">Latest Gadget Reviews</h2>
+                <a href="pages/blog.html" class="btn"
+                    style="background: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(5px);">Read Blog</a>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;"
+                id="latestGrid">
+                <!-- JS Injection -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Phones -->
+    <section class="section-padding">
+        <div class="container">
+            <h2>Top Picks by Budget</h2>
+            <div class="flex gap-4" style="margin-top: 2rem; flex-wrap: wrap;">
+                <button class="btn btn-outline active-filter">Under ₹10,000</button>
+                <button class="btn btn-outline">Under ₹15,000</button>
+                <button class="btn btn-outline">Under ₹20,000</button>
+                <button class="btn btn-outline">Premium Flagships</button>
+            </div>
+
+            <div class="grid"
+                style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;"
+                id="budgetGrid">
+                <!-- JS Injection -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section-padding"
+        style="background: white; border-radius: var(--radius-lg); margin: 2rem auto; width: 90%; max-width: 1000px; box-shadow: var(--shadow-lg);">
+        <div class="container" style="text-align: center; max-width: 600px;">
+            <span class="badge badge-hot" style="margin-bottom: 1rem;">Newsletter</span>
+            <h2 class="grad-text" style="font-size: 2.5rem;">Stay Updated</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Get the latest tech reviews, price drops, and
+                gadget news delivered to your inbox.</p>
+            <form class="flex gap-4" onsubmit="event.preventDefault(); alert('Subscribed!')"
+                style="max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Enter your email address"
+                    style="flex: 1; padding: 1rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-soft); color: var(--text-main); font-family: inherit;">
+                <button type="submit" class="btn btn-primary"
+                    style="padding-left: 2rem; padding-right: 2rem;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+                <div>
+                    <div class="nav-logo" style="margin-bottom: 1rem;">Parthi Gadget</div>
+                    <p style="color: var(--text-muted);">Your trusted source for honest gadget reviews and tech advice.
+                    </p>
+                </div>
+                <div>
+                    <h4>Categories</h4>
+                    <ul style="list-style: none; color: var(--text-muted); line-height: 2;">
+                        <li><a href="#">Mobiles</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Smartwatches</a></li>
+                        <li><a href="#">Audio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul style="list-style: none; color: var(--text-muted); line-height: 2;">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted);">
+                &copy; 2026 Parthi Gadget. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/916381611551" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

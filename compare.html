@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Gadgets | Parthi Gadget</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="../index.html" class="nav-logo">Parthi Gadget</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="compare.html" class="nav-link active">Compare</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" id="themeToggle"><i class="ri-moon-line"></i></button>
+                <button class="mobile-menu-btn" id="menuBtn"><i class="ri-menu-4-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section-padding" style="margin-top: 90px;">
+        <h1 style="text-align: center; margin-bottom: 3rem;">Compare Devices</h1>
+
+        <div class="card" style="padding: 2rem; max-width: 800px; margin: 0 auto 3rem;">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Device 1</label>
+                    <select id="select1"
+                        style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+                        <option value="">Select a device</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Device 2</label>
+                    <select id="select2"
+                        style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+                        <option value="">Select a device</option>
+                    </select>
+                </div>
+            </div>
+            <button id="compareBtn" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Compare Now</button>
+        </div>
+
+        <div id="compareResult" style="display: none;">
+            <!-- Comparison Table -->
+        </div>
+    </main>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/916381611551" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/compare.js"></script>
+</body>
+
+</html>

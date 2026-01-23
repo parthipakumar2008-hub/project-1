@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | Parthi Gadget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="../index.html" class="nav-logo">Parthi Gadget</a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link active">Categories</a>
+                <a href="compare.html" class="nav-link">Compare</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" id="themeToggle"><i class="ri-moon-line"></i></button>
+                <button class="mobile-menu-btn" id="menuBtn"><i class="ri-menu-4-line"></i></button>
+            </div>
+        </div>
+    </nav>
+    <main class="container section-padding" style="margin-top: 90px;">
+        <h1>Browse Categories</h1>
+        <div class="flex gap-4" style="margin: 2rem 0; flex-wrap: wrap;" id="catFilters">
+            <button class="btn btn-primary" data-cat="all">All</button>
+            <button class="btn btn-outline" data-cat="mobile">Mobiles</button>
+            <button class="btn btn-outline" data-cat="laptop">Laptops</button>
+            <button class="btn btn-outline" data-cat="audio">Audio</button>
+            <button class="btn btn-outline" data-cat="tablet">Tablets</button>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;"
+            id="productsGrid"></div>
+    </main>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/916381611551" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('productsGrid');
+            const btns = document.querySelectorAll('#catFilters button');
+
+            function render(cat) {
+                const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+
+                grid.innerHTML = filtered.map(product => {
+                    const whatsappMsg = `Hi, I want to order ${product.name} priced at ${formatCurrency(product.price)}.`;
+                    const whatsappLink = `https://wa.me/916381611551?text=${encodeURIComponent(whatsappMsg)}`;
+
+                    return `
+                    <div class="card" style="height: 100%; display: flex; flex-direction: column;">
+                        <a href="review.html?id=${product.id}" style="position: relative; display: block;">
+                            <img src="../${product.image}" alt="${product.name}" class="card-image" onerror="this.src='https://placehold.co/400x300?text=No+Image'">
+                             <span class="badge" style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.9); color: var(--primary-color); backdrop-filter: blur(4px); box-shadow: var(--shadow-sm);">${product.category}</span>
+                        </a>
+                        <div class="card-body" style="flex: 1; display: flex; flex-direction: column;">
+                            <a href="review.html?id=${product.id}"><h3 style="margin-bottom:0.5rem; font-size: 1.25rem;">${product.name}</h3></a>
+                            <div style="flex: 1;">
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">${product.specs.processor || 'Latest Specs'}</p>
+                            </div>
+                            <div class="flex justify-between items-center" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border-color); gap: 10px;">
+                                <span style="font-weight:700; font-size: 1.1rem; color: var(--primary-dark);">${formatCurrency(product.price)}</span>
+                                <a href="${whatsappLink}" target="_blank" class="btn btn-primary" style="padding:0.5rem 1rem; font-size:0.85rem; flex: 1; text-align: center;">Order <i class="ri-whatsapp-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `}).join('');
+            }
+
+            render('all');
+
+            btns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btns.forEach(b => {
+                        b.classList.remove('btn-primary');
+                        b.classList.add('btn-outline');
+                    });
+                    btn.classList.remove('btn-outline');
+                    btn.classList.add('btn-primary');
+                    render(btn.dataset.cat);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,60 +1,74 @@
-const products = [
-    // --- FLAGSHIPS (> 50k) ---
-    {
-        id: "apple-iphone-15-pro",
-        name: "iPhone 15 Pro",
-        brand: "Apple",
-        category: "mobile",
-        price: 134900,
-        // Path updated to match your GitHub folder
-        image: "images/iphone_15_pro.png", 
-        rating: 4.8,
-        specs: { display: "6.1\" Super Retina", processor: "A17 Pro", camera: "48MP Main", battery: "3274 mAh", ram: "8GB", storage: "128GB" },
-        tags: ["trending", "flagship", "camera"],
-        pros: ["Titanium Design", "A17 Pro Chip", "USB-C"],
-        cons: ["Expensive", "Slow Charging"],
-        bestFor: ["Vloggers", "Professionals"]
-    },
-    {
-        id: "samsung-s24-ultra",
-        name: "Samsung Galaxy S24 Ultra",
-        brand: "Samsung",
-        category: "mobile",
-        price: 129999,
-        // Path updated
-        image: "images/s24_ultra.png",
-        rating: 4.9,
-        specs: { display: "6.8\" QHD+ 120Hz", processor: "Snapdragon 8 Gen 3", camera: "200MP Quad", battery: "5000 mAh", ram: "12GB", storage: "256GB" },
-        tags: ["trending", "flagship", "productivity"],
-        pros: ["S-Pen", "AI Features", "Best Zoom"],
-        cons: ["Very Large", "Pricey"],
-        bestFor: ["Power Users", "Zoom Photos"]
-    },
+<!DOCTYPE html>
+<html lang="en">
 
-    // --- MID-RANGE (20k - 50k) ---
-    {
-        id: "oneplus-12r",
-        name: "OnePlus 12R",
-        brand: "OnePlus",
-        category: "mobile",
-        price: 39999,
-        // Path updated
-        image: "images/oneplus_12r.png",
-        rating: 4.5,
-        specs: { display: "6.78\" AMOLED", processor: "SD 8 Gen 2", camera: "50MP Triple", battery: "5500 mAh", ram: "8GB", storage: "128GB" },
-        tags: ["gaming", "performance"],
-        pros: ["Huge Battery", "Flagship Perf", "Great Display"],
-        cons: ["Avg Ultrawide", "Curved Screen (Polarizing)"],
-        bestFor: ["Gamers", "Students"]
-    },
-    {
-        id: "nothing-phone-2a",
-        name: "Nothing Phone (2a)",
-        brand: "Nothing",
-        category: "mobile",
-        price: 23999,
-        // Path updated
-        image: "images/nothing_2a.png",
-        rating: 4.4,
-        specs: { display: "6.7\" AMOLED", processor: "Dimensity 7200 Pro", camera: "50MP Dual", battery: "5000 mAh", ram: "8GB", storage: "128GB" },
-        tags: ["design", "unique"],
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Parthi Gadget - Honest mobile and gadget reviews, comparisons, and buying guides.">
+    <title>Parthi Gadget | Best Mobile & Gadget Reviews</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="nav-logo">Parthi Gadget</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/categories.html" class="nav-link">Categories</a>
+                <a href="pages/compare.html" class="nav-link">Compare</a>
+                <a href="pages/blog.html" class="nav-link">Blog</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">
+                    <i class="ri-menu-4-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero section-padding" style="position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <span class="badge badge-new" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <i class="ri-sparkling-fill" style="margin-right: 5px;"></i> The Future of Tech is Here
+                </span>
+
+                <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;" class="grad-text">
+                    Discover Your Next <br> Gadget Adventure
+                </h1>
+
+                <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We review the latest phones, laptops, and more so you don't have to.
+                </p>
+
+                <div style="background: white; padding: 10px; border-radius: 50px; box-shadow: var(--shadow-lg); display: flex; max-width: 600px; margin: 0 auto 3rem; border: 1px solid var(--border-color);">
+                    <i class="ri-search-line" style="font-size: 1.5rem; color: var(--primary-color); margin: 0 15px; align-self: center;"></i>
+                    <input type="text" placeholder="Search for phones, laptops..." style="flex: 1; border: none; outline: none; font-size: 1rem; color: var(--text-main);">
+                    <button class="btn btn-primary" style="padding: 0.75rem 2rem;">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="trending" class="section-padding">
+        <div class="container">
+            <div class="flex justify-between items-center" style="margin-bottom: 2rem;">
+                <h2>Trending Mobiles</h2>
+                <a href="pages/categories.html" style="color: var(--primary-color); font-weight:

@@ -6,7 +6,8 @@ const products = [
         brand: "Apple",
         category: "mobile",
         price: 134900,
-        image: "assets/images/iphone_15_pro.png",
+        // Path updated to match your GitHub folder
+        image: "images/iphone_15_pro.png", 
         rating: 4.8,
         specs: { display: "6.1\" Super Retina", processor: "A17 Pro", camera: "48MP Main", battery: "3274 mAh", ram: "8GB", storage: "128GB" },
         tags: ["trending", "flagship", "camera"],
@@ -20,7 +21,8 @@ const products = [
         brand: "Samsung",
         category: "mobile",
         price: 129999,
-        image: "assets/images/s24_ultra.png",
+        // Path updated
+        image: "images/s24_ultra.png",
         rating: 4.9,
         specs: { display: "6.8\" QHD+ 120Hz", processor: "Snapdragon 8 Gen 3", camera: "200MP Quad", battery: "5000 mAh", ram: "12GB", storage: "256GB" },
         tags: ["trending", "flagship", "productivity"],
@@ -36,7 +38,8 @@ const products = [
         brand: "OnePlus",
         category: "mobile",
         price: 39999,
-        image: "assets/images/oneplus_12r.png",
+        // Path updated
+        image: "images/oneplus_12r.png",
         rating: 4.5,
         specs: { display: "6.78\" AMOLED", processor: "SD 8 Gen 2", camera: "50MP Triple", battery: "5500 mAh", ram: "8GB", storage: "128GB" },
         tags: ["gaming", "performance"],
@@ -50,7 +53,8 @@ const products = [
         brand: "Nothing",
         category: "mobile",
         price: 23999,
-        image: "assets/images/nothing_2a.png",
+        // Path updated
+        image: "images/nothing_2a.png",
         rating: 4.4,
         specs: { display: "6.7\" AMOLED", processor: "Dimensity 7200 Pro", camera: "50MP Dual", battery: "5000 mAh", ram: "8GB", storage: "128GB" },
         tags: ["design", "unique"],
@@ -66,7 +70,8 @@ const products = [
         brand: "Realme",
         category: "mobile",
         price: 17999,
-        image: "assets/images/realme_narzo.png",
+        // Path updated
+        image: "images/realme_narzo.png",
         rating: 4.3,
         specs: { display: "6.43\" sAMOLED", processor: "Dimensity 6020", camera: "64MP", battery: "5000 mAh", ram: "8GB", storage: "128GB" },
         tags: ["budget", "5g"],
@@ -80,7 +85,8 @@ const products = [
         brand: "Xiaomi",
         category: "mobile",
         price: 10999,
-        image: "assets/images/redmi_13c.png",
+        // Path updated
+        image: "images/redmi_13c.png",
         rating: 4.1,
         specs: { display: "6.74\" 90Hz", processor: "Dimensity 6100+", camera: "50MP AI", battery: "5000 mAh", ram: "4GB", storage: "128GB" },
         tags: ["budget", "5g", "entry"],
@@ -196,7 +202,8 @@ const products = [
         brand: "Sony",
         category: "audio",
         price: 19990,
-        image: "assets/images/sony_xm5.png",
+        // Path updated
+        image: "images/sony_xm5.png",
         rating: 4.7,
         specs: { type: "TWS", battery: "36 Hours", anc: "Best in Class", water_resistance: "IPX4" },
         tags: ["audio", "premium"],
@@ -226,14 +233,16 @@ const blogPosts = [
         title: "Top 5 Phones Under ₹20,000 in 2026",
         date: "Jan 20, 2026",
         excerpt: "Looking for a budget beast? Here are our top picks for performance and camera on a budget.",
-        image: "assets/images/redmi_13c.png"
+        // Path updated
+        image: "images/redmi_13c.png"
     },
     {
         id: 2,
         title: "iPhone 16 Rumors: What to Expect?",
         date: "Jan 18, 2026",
         excerpt: "Leaks suggest a major redesign and AI features. Here is everything we know so far.",
-        image: "assets/images/iphone_15_pro.png"
+        // Path updated
+        image: "images/iphone_15_pro.png"
     },
     {
         id: 3,
